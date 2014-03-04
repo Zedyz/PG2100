@@ -28,4 +28,10 @@ public class kontrakt extends Tjeneste {
 		
 	}
 	
+	public String toString()	{
+			
+			return "Dag: " + getDag();
+			
+		}
+	
 }

@@ -4,18 +4,9 @@ public class utrykning extends Tjeneste {
 
 	public int gebyr;
 	
-	/*
-	 * public void testmetode()	{
-	 * 
-	 * 
-	 * 
-	 * 
-	 */
-	
-	
-	
 	public utrykning()	{
 		
+		this(0);
 		
 	}
 	
@@ -34,6 +25,11 @@ public class utrykning extends Tjeneste {
 	public int getGebyr()	{
 		
 		return gebyr;
+	}
+	
+	public String toString()	{
+		
+		return "Gebyr " + getGebyr();
 		
 	}
 	

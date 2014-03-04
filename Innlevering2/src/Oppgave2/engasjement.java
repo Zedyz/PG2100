@@ -27,4 +27,10 @@ public class engasjement extends Tjeneste {
 		
 	}
 	
+	public String toString()	{
+			
+			return "Varighet " + getVarighet();
+			
+		}
+	
 }

@@ -55,31 +55,24 @@ public class Tjeneste {
 		
 	}
 	
-	/*public int getGebyr()	{
-		
-		return gebyr;
+	public void oversikt()	{
 		
 	}
 	
-	public String getDag()	{
-		
-		return dag;
-	}
+	// equals metode?
 	
-	public int getVarighet()	{
-		
-		return varighet;
+	public boolean equals(Object other)	{
+		if(!(other instanceof Tjeneste)) return false;
+		if(other == this) return true;
+		Tjeneste t = (Tjeneste) other;
+		return getRegnr() == (t.getRegnr());
 		
 	}
 	
 	public String toString()	{
 		
-		return;
-	}*/
-	
-	/*public String toString()	{
+		return "Reg. nr. " + getRegnr() + "\nKontaktperson " + getKontaktperson() + "\nPris " + getPris();
 		
-		
-	}*/
+	}
 	
 }
