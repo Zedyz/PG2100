@@ -6,32 +6,28 @@ public class kontrakt extends Tjeneste {
 	
 	public kontrakt()	{
 		
-		this("");
-		
-	}
-	
-	public kontrakt(String dag)	{
-		
-		setDag(dag);
-		
+		this(0, "", 0, "");
 	}
 
-	private void setDag(String dag)	{
+	public kontrakt(int regNr, String kontaktperson, int pris, String dag) {
+		
+		super(regNr, kontaktperson, pris);
+		setDag(dag);
+	}
+
+	private void setDag(String dag) {
 		
 		this.dag = dag;
-		
 	}
 	
 	public String getDag()	{
 		
 		return dag;
-		
 	}
 	
 	public String toString()	{
-			
-			return "Dag: " + getDag();
-			
-		}
+		
+		return super.toString() + getDag();
+	}
 	
 }

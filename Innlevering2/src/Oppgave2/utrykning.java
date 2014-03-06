@@ -6,20 +6,18 @@ public class utrykning extends Tjeneste {
 	
 	public utrykning()	{
 		
-		this(0);
-		
+		this(0, "", 0, 0);
 	}
-	
-	public utrykning(int gebyr)	{
+
+	public utrykning(int regNr, String kontaktperson, int pris, int gebyr) {
 		
+		super(regNr, kontaktperson, pris);
 		setGebyr(gebyr);
-		
 	}
 
 	private void setGebyr(int gebyr) {
 		
 		this.gebyr = gebyr;
-		
 	}
 	
 	public int getGebyr()	{
@@ -29,8 +27,7 @@ public class utrykning extends Tjeneste {
 	
 	public String toString()	{
 		
-		return "Gebyr " + getGebyr();
-		
+		return super.toString() + getGebyr();
 	}
 	
 }

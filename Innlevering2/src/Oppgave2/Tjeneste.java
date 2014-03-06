@@ -2,7 +2,7 @@ package Oppgave2;
 
 public class Tjeneste {
 	
-	public int regnr;
+	public int regNr;
 	public String kontaktperson;
 	public int pris;
 	
@@ -10,69 +10,54 @@ public class Tjeneste {
 		
 		this(0, "", 0);
 	}
-	
-	public Tjeneste(int regnr, String kontaktperson, int pris)	{
+
+	public Tjeneste(int regNr, String kontaktperson, int pris) {
 		
-		setRegnr(regnr);
+		setRegNr(regNr);
 		setKontaktperson(kontaktperson);
 		setPris(pris);
-		
 	}
 
-	private void setRegnr(int regnr) {
+	private void setRegNr(int regNr) {
 		
-		this.regnr = regnr;
-		
+		this.regNr = regNr;
 	}
 
 	private void setKontaktperson(String kontaktperson) {
 		
 		this.kontaktperson = kontaktperson;
-		
 	}
 
 	private void setPris(int pris) {
 		
-		this.pris = pris;
-		
+		this.pris = pris;	
 	}
 	
-	public int getRegnr()	{
+	public int getRegNr()	{
 		
-		return regnr;
-		
+		return regNr;
 	}
 	
 	public String getKontaktperson()	{
 		
 		return kontaktperson;
-		
 	}
 	
 	public int getPris()	{
 		
 		return pris;
-		
 	}
-	
-	public void oversikt()	{
-		
-	}
-	
-	// equals metode?
 	
 	public boolean equals(Object other)	{
 		if(!(other instanceof Tjeneste)) return false;
 		if(other == this) return true;
 		Tjeneste t = (Tjeneste) other;
-		return getRegnr() == (t.getRegnr());
-		
+		return getRegNr() == (t.getRegNr());
 	}
 	
 	public String toString()	{
 		
-		return "Reg. nr. " + getRegnr() + "\nKontaktperson " + getKontaktperson() + "\nPris " + getPris();
-		
+		return getRegNr() + " " + getKontaktperson() + " " + getPris();
 	}
 	
 }

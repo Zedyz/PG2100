@@ -6,9 +6,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		utrykning utrykning = new utrykning();
-		kontrakt kontrakt = new kontrakt();
-		engasjement engasjement = new engasjement();
+		Tjeneste utrykning = new utrykning(212, "testperson1", 123, 123);
+		Tjeneste kontrakt = new kontrakt(213, "testperson2", 232, "fredag");
+		Tjeneste engasjement = new engasjement(1232, "testperson3", 231, 213);
 		
 		ArrayList<Tjeneste> tjenester = new ArrayList<Tjeneste>();
 		
@@ -18,41 +18,9 @@ public class Main {
 		
 		for(int i = 0; i < tjenester.size(); i++)	{
 			
-			Tjeneste tjeneste2 = tjenester.get(i);
+			Tjeneste temp = tjenester.get(i);
 			
-			System.out.println(tjeneste2.getRegnr() + "Reg nr" +
-			
-					tjeneste2.getKontaktperson() + "kontaktperson" + 
-					tjeneste2.getPris() + "Pris"
-					
-					);
-			
-
-			
-			
-			System.out.println(tjeneste2);
-			
+			System.out.println(temp);
 		}
-		
-		
-		
-		/*Tjeneste tjeneste1 = new Tjeneste();
-		
-		Tjeneste tjeneste[] = new Tjeneste[3];
-		tjeneste[0] = new utrykning();
-		tjeneste[1] = new kontrakt();
-		tjeneste[2] = new engasjement();
-		
-		for(int i = 0; i < tjeneste.length; i++)	{
-			
-			
-			
-			System.out.println(tjeneste1.toString());
-			
-			System.out.println(tjeneste[i].toString());
-			
-		}*/
-		
 	}
-	
 }
